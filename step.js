@@ -11,7 +11,7 @@ return false;
 }
 else{
 attempt --;// Decrementing by one.
-alert("login failed");
+alert("login that bai");
 // Disabling fields after 3 attempts.
 if( attempt == 0){
 document.getElementById("username").disabled = true;
