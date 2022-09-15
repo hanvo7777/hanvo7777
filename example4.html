@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>example4</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let price = 100;
+        let VAT = 0.025;
+        let total = `Total: ${(price * (0.1 + VAT)).toFixed(2)}`;
+
+        document.getElementById("demo").innerHTML = total;
+    </script>
+</body>

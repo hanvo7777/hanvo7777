@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>this </title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        let x = this;
+        document.getElementById("demo").innerHTML = x;
+
+        const person = {
+            firstName: "Han",
+            lastName: "Vo",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        document.getElementById("demo1").innerHTML = person.fullName();
+
+        const member = {
+            firstName: "Hoa",
+            lastName: "Vo",
+        }
+        let fullName = person.fullName.bind(member);
+        document.getElementById("demo2").innerHTML = fullName();
+    </script>
+
+</body>
+
+</html>
